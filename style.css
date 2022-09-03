@@ -1,6 +1,6 @@
 body {
-    background-image: url('background1.jpeg');
     margin: 0;
+    background-image: url('background1.jpeg');
     padding: 0;
 }
 
@@ -104,10 +104,4 @@ body {
 
 .team-budget {
     text-decoration: none;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }

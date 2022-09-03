@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://pbs.twimg.com/media/CZ8hgfaUMAAUEg5.jpg:large');
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+.add-item {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.item-heading {
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 564px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.Update {
+    border-radius: 0%;
+    background-color: rgb(6, 45, 6);
+    color: white;
+    font-style: bold;
+    border: 0;
+
+}
+
+.Update:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: rgb(92, 250, 139);
+}
+
+.Delete {
+    border-radius: 0%;
+    background-color: rgb(186, 5, 5);
+    color: white;
+    font-style: bold;
+    border: 0;
+    cursor: pointer;
+}
+
+.Delete:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.item {
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 564px;
+    margin: 9px;
+    height: 76px;
+    font-family: 'PT Sans';
+    font-weight: 500;
+    font-size: 22px;
+    font-style: bold;
+    color: white;
+    /* background: rgba(0, 0, 0, 0.5); */
+}
+
+label {
+    font-family: 'PT Sans';
+    font-weight: 500;
+    font-size: 22px;
+    font-style: bold;
+    color: white;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background: black;
+}
+
+form {
+    display: flex;
+    /* flex-direction: column; */
+    width: 759px;
+    justify-content: space-around;
+    align-items: center;
+    height: 170px;
+
+}
+
+/* .form-sum {
+    height: 160px;
+} */
+
+.budget-display {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+    height: 234px;
+    padding-top: 45px;
+}
+
+.form-sub {
+    height: -126px;
+}
