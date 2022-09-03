@@ -13,66 +13,111 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
         integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="form-sub">
-            <form action="" class="">
-                <label for="item-name">Item</label>
-                <input type="text" id="item-name">
-                <label for="item-expense">Expense</label>
-                <input type="text" id="item-expense">
-                <label for="">Category</label>
-                <input type="text" id="item-category">
-                <button class="add-item">ADD</button>
-            </form>
+    <div class="merge">
+        <div class="header" style="color: white;">
+            <div class="title">BudgetManagement</div>
         </div>
-        <div class="budget-display">
-            <div class="item-heading">
-                <div class="item">Item</div>
-                <div class="item">Category</div>
-                <div class="item">Date</div>
-                <div class="item">Expense</div>
-                <div class=" item">Update</div>
-                <div class=" item">Delete</div>
+        <div class="team-name">
+            <h1>RAFTAR</h1>
+        </div>
+        <div class="container">
+            <div class="form-sub">
+                <form action="" class="">
+                    <label for="item-name">Item</label>
+                    <input type="text" id="item-name">
+                    <label for="item-expense">Expense</label>
+                    <input type="text" id="item-expense">
+                    <label for="">Category</label>
+                    <input type="text" id="item-category">
+                    <button class="add-item">ADD</button>
+                </form>
+                <div class="chartBox">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
             </div>
-            <div class="item-heading">
-                <div class="item">Item</div>
-                <div class="item">Category</div>
-                <div class="item">04/09/2022</div>
-                <div class="item">$500</div>
-                <button class="Update item"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button class="Delete item"><i class="fa-solid fa-trash-can"></i></button>
-            </div>
-            <div class="item-heading">
-                <div class="item">Item</div>
-                <div class="item">Category</div>
-                <div class="item">04/09/2022</div>
-                <div class="item">$500</div>
-                <button class="Update item"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button class="Delete item"><i class="fa-solid fa-trash-can"></i></button>
+            <div class="budget-display">
+                <div class="item-heading">
+                    <div class="item">Item</div>
+                    <div class="item">Category</div>
+                    <div class="item">Date</div>
+                    <div class="item">Expense</div>
+                    <div class=" item">Update</div>
+                    <div class=" item">Delete</div>
+                </div>
+                <div class="item-heading">
+                    <div class="item">Item</div>
+                    <div class="item">Category</div>
+                    <div class="item">04/09/2022</div>
+                    <div class="item">$500</div>
+                    <button class="Update item"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="Delete item"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <div class="item-heading">
+                    <div class="item">Item</div>
+                    <div class="item">Category</div>
+                    <div class="item">04/09/2022</div>
+                    <div class="item">$500</div>
+                    <button class="Update item"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="Delete item"><i class="fa-solid fa-trash-can"></i></button>
 
-            </div>
-            <div class="item-heading">
-                <div class="item">Item</div>
-                <div class="item">Category</div>
-                <div class="item">04/09/2022</div>
-                <div class="item">$500</div>
-                <button class="Update item"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button class="Delete item"><i class="fa-solid fa-trash-can"></i></button>
-            </div>
-            <div class="item-heading">
-                <div class="item">Item</div>
-                <div class="item">Category</div>
-                <div class="item">04/09/2022</div>
-                <div class="item">$500</div>
-                <button class="Update item"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button class="Delete item"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <div class="item-heading">
+                    <div class="item">Item</div>
+                    <div class="item">Category</div>
+                    <div class="item">04/09/2022</div>
+                    <div class="item">$500</div>
+                    <button class="Update item"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="Delete item"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <div class="item-heading">
+                    <div class="item">Item</div>
+                    <div class="item">Category</div>
+                    <div class="item">04/09/2022</div>
+                    <div class="item">$500</div>
+                    <button class="Update item"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="Delete item"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
             </div>
         </div>
     </div>
 
+
 </body>
+<script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 206, 86, 0.8)',
+                    'rgba(75, 192, 192, 0.8)',
+                    'rgba(153, 102, 255, 0.8)',
+                    'rgba(255, 159, 64, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {}
+
+    });
+</script>
 
 </html>
