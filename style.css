@@ -105,3 +105,9 @@ body {
 .team-budget {
     text-decoration: none;
 }
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
